@@ -1,0 +1,39 @@
+ALGORITHM SumDistinctElement
+VAR
+Vect1: ARRAY_OF INTEGER[10];
+Vect2: ARRAY_OF INTEGER[10];
+i,j, sum:INTEGER;
+trouv: BOOLEAN;
+BEGIN 
+//initialiser sum a zero
+    sum:=0;
+// rechcerche les element du premier tableau dans le deuxieme si diffent on rajoute a la somme
+FOR i FROM min 0 max Vect1.length-1 STEP 1 DO
+//initialisation de trouv var booleene temoin
+trouv:= faux; 
+  FOR j FROM 0 TO Vect2.length-1  STEP 1  DO
+  IF (Vect1[i] == Vect2[j]) THEN trouve:= vrai; Break;
+  END_IF
+  END_FOR
+IF (trouve == faux) THEN  
+    sum:= sum + Vect1[i]
+END_IF
+END_FOR
+
+// recherche dans le deuxieme  tableau de la meme facon que le premier
+FOR i FROM min 0 max Vect2.length-1 STEP 1 DO
+//reintialisation de trouve
+trouve:= faux;
+FOR j FROM 0 TO Vect1.length-1  STEP 1  DO
+IF (Vect2[i] == Vect1[j]) THEN trouve:= vrai; Break;
+END_IF
+END_FOR
+IF (trouve == faux) THEN  
+    sum:= sum + Vect2[i]
+END_IF
+END_FOR
+
+// ecrire le resultat sum
+writeln('La somme des valeurs distinct des deux tableaux est:', sum)
+
+END
