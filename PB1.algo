@@ -21,7 +21,7 @@ END_IF
 END_FOR
 
 // recherche dans le deuxieme  tableau de la meme facon que le premier
-FOR i FROM min 0 max Vect2.length-1 STEP 1 DO
+FOR i FROM 0 TO  Vect2.length-1 STEP 1 DO
 //reintialisation de trouve
 trouve:= faux;
 FOR j FROM 0 TO Vect1.length-1  STEP 1  DO
