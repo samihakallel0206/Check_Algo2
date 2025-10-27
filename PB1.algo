@@ -8,7 +8,7 @@ BEGIN
 //initialiser sum a zero
     sum:=0;
 // rechcerche les element du premier tableau dans le deuxieme si diffent on rajoute a la somme
-FOR i FROM min 0 max Vect1.length-1 STEP 1 DO
+FOR i FROM  0 Vect1.length-1 STEP 1 DO
 //initialisation de trouv var booleene temoin
 trouv:= faux; 
   FOR j FROM 0 TO Vect2.length-1  STEP 1  DO
